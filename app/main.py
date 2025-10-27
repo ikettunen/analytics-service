@@ -1,0 +1,19 @@
+from fastapi import FastAPI
+from loguru import logger
+from app.routers.analytics import router as analytics_router
+from app.core.config import settings
+
+app = FastAPI(
+    title="Analytics Service API",
+    description="Aggregates analytics from MySQL and MongoDB",
+    version="1.0.0",
+    docs_url="/api-docs",
+    redoc_url="/redoc",
+    openapi_url="/openapi.json",
+)
+
+@app.get("/health", tags=["Health"])
+async def health():
+    return {"status": "ok", "service": "analytics-service"}
+
+app.include_router(analytics_router, prefix="/api/analytics", tags=["Analytics"])
