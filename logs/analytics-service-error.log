@@ -163,3 +163,35 @@
 2025-11-16T13:37:05:  * Running on http://10.105.198.118:3005
 2025-11-16T13:37:05: Press CTRL+C to quit
 2025-11-16T13:37:05:  * Restarting with stat
+2025-11-16T13:38:44: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+2025-11-16T13:38:44:  * Running on all addresses (0.0.0.0)
+2025-11-16T13:38:44:  * Running on http://127.0.0.1:3005
+2025-11-16T13:38:44:  * Running on http://10.105.198.118:3005
+2025-11-16T13:38:44: Press CTRL+C to quit
+2025-11-16T13:38:44:  * Restarting with stat
+2025-11-16T14:52:40:  * Restarting with stat
+2025-11-16T18:52:08:  * Restarting with stat
+2025-11-16T19:00:37: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+2025-11-16T19:00:37:  * Running on all addresses (0.0.0.0)
+2025-11-16T19:00:37:  * Running on http://127.0.0.1:3005
+2025-11-16T19:00:37:  * Running on http://10.105.198.118:3005
+2025-11-16T19:00:37: Press CTRL+C to quit
+2025-11-16T19:00:37:  * Restarting with stat
+2025-11-16T19:10:20: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+2025-11-16T19:10:20:  * Running on all addresses (0.0.0.0)
+2025-11-16T19:10:20:  * Running on http://127.0.0.1:3005
+2025-11-16T19:10:20:  * Running on http://10.105.198.118:3005
+2025-11-16T19:10:20: Press CTRL+C to quit
+2025-11-16T19:10:20:  * Restarting with stat
+2025-11-16T19:19:45: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+2025-11-16T19:19:45:  * Running on all addresses (0.0.0.0)
+2025-11-16T19:19:45:  * Running on http://127.0.0.1:5002
+2025-11-16T19:19:45:  * Running on http://10.105.198.118:5002
+2025-11-16T19:19:45: Press CTRL+C to quit
+2025-11-16T19:19:45:  * Restarting with stat
+2025-11-18T16:31:14: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+2025-11-18T16:31:14:  * Running on all addresses (0.0.0.0)
+2025-11-18T16:31:14:  * Running on http://127.0.0.1:5002
+2025-11-18T16:31:14:  * Running on http://192.168.1.102:5002
+2025-11-18T16:31:14: Press CTRL+C to quit
+2025-11-18T16:31:14:  * Restarting with stat
