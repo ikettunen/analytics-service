@@ -82,6 +82,136 @@ def performance():
     except Exception as e:
         return jsonify({"error": str(e), "data": None}), 500
 
+@app.route('/api/analytics/staff/<staff_id>/tasks/today', methods=['GET'])
+def staff_tasks_today(staff_id):
+    """Get task summary for a specific staff member for today"""
+    try:
+        if mongo_db is None:
+            return jsonify({"error": "MongoDB not available", "data": None}), 500
+            
+        # Get today's date range
+        from datetime import datetime, timezone
+        today_start = datetime.now(timezone.utc).replace(hour=0, minute=0, second=0, microsecond=0)
+        today_end = datetime.now(timezone.utc).replace(hour=23, minute=59, second=59, microsecond=999999)
+        
+        # MongoDB aggregation pipeline
+        pipeline = [
+            {
+                "$match": {
+                    "nurseId": staff_id,
+                    "scheduledTime": {
+                        "$gte": today_start,
+                        "$lt": today_end
+                    }
+                }
+            },
+            {"$unwind": "$taskCompletions"},
+            {
+                "$group": {
+                    "_id": None,
+                    "totalTasks": {"$sum": 1},
+                    "completedTasks": {
+                        "$sum": {"$cond": ["$taskCompletions.completed", 1, 0]}
+                    },
+                    "pendingTasks": {
+                        "$sum": {"$cond": ["$taskCompletions.completed", 0, 1]}
+                    },
+                    "highPriorityPending": {
+                        "$sum": {
+                            "$cond": [
+                                {
+                                    "$and": [
+                                        {"$eq": ["$taskCompletions.priority", "high"]},
+                                        {"$eq": ["$taskCompletions.completed", False]}
+                                    ]
+                                }, 1, 0
+                            ]
+                        }
+                    },
+                    "totalVisits": {"$addToSet": "$_id"}
+                }
+            },
+            {
+                "$project": {
+                    "totalTasks": 1,
+                    "completedTasks": 1,
+                    "pendingTasks": 1,
+                    "highPriorityPending": 1,
+                    "totalVisits": {"$size": "$totalVisits"},
+                    "completionRate": {
+                        "$cond": [
+                            {"$eq": ["$totalTasks", 0]},
+                            0,
+                            {"$multiply": [{"$divide": ["$completedTasks", "$totalTasks"]}, 100]}
+                        ]
+                    }
+                }
+            }
+        ]
+        
+        result = list(mongo_db.visit_data.aggregate(pipeline))
+        
+        if result:
+            data = result[0]
+            # Remove the _id field
+            data.pop('_id', None)
+            return jsonify({"data": data})
+        else:
+            # No tasks found for today
+            return jsonify({"data": {
+                "totalTasks": 0,
+                "completedTasks": 0,
+                "pendingTasks": 0,
+                "highPriorityPending": 0,
+                "totalVisits": 0,
+                "completionRate": 0
+            }})
+            
+    except Exception as e:
+        return jsonify({"error": str(e), "data": None}), 500
+
+@app.route('/api/analytics/staff/<staff_id>/visits/today', methods=['GET'])
+def staff_visits_today(staff_id):
+    """Get today's visits for a specific staff member with task details"""
+    try:
+        if mongo_db is None:
+            return jsonify({"error": "MongoDB not available", "data": None}), 500
+            
+        # Get today's date range
+        from datetime import datetime, timezone
+        today_start = datetime.now(timezone.utc).replace(hour=0, minute=0, second=0, microsecond=0)
+        today_end = datetime.now(timezone.utc).replace(hour=23, minute=59, second=59, microsecond=999999)
+        
+        # Find today's visits for this staff member
+        visits = list(mongo_db.visit_data.find(
+            {
+                "nurseId": staff_id,
+                "scheduledTime": {
+                    "$gte": today_start,
+                    "$lt": today_end
+                }
+            },
+            {
+                "patientName": 1,
+                "scheduledTime": 1,
+                "status": 1,
+                "visitType": 1,
+                "taskCompletions.taskTitle": 1,
+                "taskCompletions.completed": 1,
+                "taskCompletions.priority": 1,
+                "taskCompletions.taskCategory": 1
+            }
+        ).sort("scheduledTime", 1))
+        
+        # Convert ObjectId to string for JSON serialization
+        for visit in visits:
+            visit['_id'] = str(visit['_id'])
+            
+        return jsonify({"data": visits})
+            
+    except Exception as e:
+        return jsonify({"error": str(e), "data": None}), 500
+
 @app.route('/api/analytics/dashboard/stats', methods=['GET'])
 def dashboard_stats():
     try:

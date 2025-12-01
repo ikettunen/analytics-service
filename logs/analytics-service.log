@@ -337,3 +337,59 @@
 2025-11-30T11:00:16:  * Running on http://192.168.1.102:5002
 2025-11-30T11:00:16: Press CTRL+C to quit
 2025-11-30T11:00:16:  * Restarting with stat
+2025-11-30T11:22:16:  * Serving Flask app 'app'
+2025-11-30T11:22:16:  * Debug mode: on
+2025-11-30T11:22:16: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+2025-11-30T11:22:16:  * Running on all addresses (0.0.0.0)
+2025-11-30T11:22:16:  * Running on http://127.0.0.1:5002
+2025-11-30T11:22:16:  * Running on http://192.168.1.102:5002
+2025-11-30T11:22:16: Press CTRL+C to quit
+2025-11-30T11:22:16:  * Restarting with stat
+2025-11-30T22:52:59:  * Serving Flask app 'app'
+2025-11-30T22:52:59:  * Debug mode: on
+2025-11-30T22:52:59: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+2025-11-30T22:52:59:  * Running on all addresses (0.0.0.0)
+2025-11-30T22:52:59:  * Running on http://127.0.0.1:5002
+2025-11-30T22:52:59:  * Running on http://192.168.1.102:5002
+2025-11-30T22:52:59: Press CTRL+C to quit
+2025-11-30T22:52:59:  * Restarting with stat
+2025-11-30T23:00:14:  * Serving Flask app 'app'
+2025-11-30T23:00:14:  * Debug mode: on
+2025-11-30T23:00:14: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+2025-11-30T23:00:14:  * Running on all addresses (0.0.0.0)
+2025-11-30T23:00:14:  * Running on http://127.0.0.1:5002
+2025-11-30T23:00:14:  * Running on http://192.168.1.102:5002
+2025-11-30T23:00:14: Press CTRL+C to quit
+2025-11-30T23:00:14:  * Restarting with stat
+2025-11-30T23:10:08:  * Serving Flask app 'app'
+2025-11-30T23:10:08:  * Debug mode: on
+2025-11-30T23:10:08: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+2025-11-30T23:10:08:  * Running on all addresses (0.0.0.0)
+2025-11-30T23:10:08:  * Running on http://127.0.0.1:5002
+2025-11-30T23:10:08:  * Running on http://192.168.1.102:5002
+2025-11-30T23:10:08: Press CTRL+C to quit
+2025-11-30T23:10:08:  * Restarting with stat
+2025-12-01T12:26:53:  * Serving Flask app 'app'
+2025-12-01T12:26:53:  * Debug mode: on
+2025-12-01T12:26:53: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+2025-12-01T12:26:53:  * Running on all addresses (0.0.0.0)
+2025-12-01T12:26:53:  * Running on http://127.0.0.1:5002
+2025-12-01T12:26:53:  * Running on http://192.168.1.102:5002
+2025-12-01T12:26:53: Press CTRL+C to quit
+2025-12-01T12:26:53:  * Restarting with stat
+2025-12-01T12:30:20:  * Serving Flask app 'app'
+2025-12-01T12:30:20:  * Debug mode: on
+2025-12-01T12:30:20: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+2025-12-01T12:30:20:  * Running on all addresses (0.0.0.0)
+2025-12-01T12:30:20:  * Running on http://127.0.0.1:5002
+2025-12-01T12:30:20:  * Running on http://192.168.1.102:5002
+2025-12-01T12:30:20: Press CTRL+C to quit
+2025-12-01T12:30:20:  * Restarting with stat
+2025-12-01T12:35:14:  * Serving Flask app 'app'
+2025-12-01T12:35:14:  * Debug mode: on
+2025-12-01T12:35:14: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+2025-12-01T12:35:14:  * Running on all addresses (0.0.0.0)
+2025-12-01T12:35:14:  * Running on http://127.0.0.1:5002
+2025-12-01T12:35:14:  * Running on http://192.168.1.102:5002
+2025-12-01T12:35:14: Press CTRL+C to quit
+2025-12-01T12:35:14:  * Restarting with stat
