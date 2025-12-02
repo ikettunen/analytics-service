@@ -303,3 +303,21 @@
 2025-12-01T12:35:21:  * Running on http://192.168.1.102:5002
 2025-12-01T12:35:21: Press CTRL+C to quit
 2025-12-01T12:35:21:  * Restarting with stat
+2025-12-02T16:12:07: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+2025-12-02T16:12:07:  * Running on all addresses (0.0.0.0)
+2025-12-02T16:12:07:  * Running on http://127.0.0.1:5002
+2025-12-02T16:12:07:  * Running on http://192.168.1.102:5002
+2025-12-02T16:12:07: Press CTRL+C to quit
+2025-12-02T16:12:07:  * Restarting with stat
+2025-12-02T16:35:00: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+2025-12-02T16:35:00:  * Running on all addresses (0.0.0.0)
+2025-12-02T16:35:00:  * Running on http://127.0.0.1:5002
+2025-12-02T16:35:00:  * Running on http://192.168.1.102:5002
+2025-12-02T16:35:00: Press CTRL+C to quit
+2025-12-02T16:35:00:  * Restarting with stat
+2025-12-02T17:03:30: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+2025-12-02T17:03:30:  * Running on all addresses (0.0.0.0)
+2025-12-02T17:03:30:  * Running on http://127.0.0.1:5002
+2025-12-02T17:03:30:  * Running on http://192.168.1.102:5002
+2025-12-02T17:03:30: Press CTRL+C to quit
+2025-12-02T17:03:30:  * Restarting with stat
