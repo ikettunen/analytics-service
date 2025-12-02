@@ -40,8 +40,16 @@ jobs:
         # Copy new files (excluding .git and __pycache__)
         rsync -av --exclude='.git' --exclude='__pycache__' --exclude='*.pyc' ./ ~/analytics-service/
         
-        # Install dependencies in target directory
+        # Setup production environment
         cd ~/analytics-service
+        if [ -f .env.production ]; then
+          cp .env.production .env
+          echo "✅ Copied .env.production to .env"
+        else
+          echo "⚠️  Warning: .env.production not found"
+        fi
+        
+        # Install dependencies in target directory
         pip install -r requirements.txt
         
         echo "Deployed to ~/analytics-service"
