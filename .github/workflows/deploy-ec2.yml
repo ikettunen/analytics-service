@@ -42,12 +42,16 @@ jobs:
         
         # Setup production environment
         cd ~/analytics-service
-        if [ -f .env.production ]; then
-          cp .env.production .env
-          echo "✅ Copied .env.production to .env"
-        else
-          echo "⚠️  Warning: .env.production not found"
-        fi
+        cp .env.production .env
+        
+        # Add deployment timestamp (cross-platform compatible)
+        {
+          echo ""
+          echo "# Last deployed: $(date -u +'%Y-%m-%d %H:%M:%S UTC') via GitHub Actions"
+          echo "# Deployment ID: $GITHUB_RUN_ID"
+          echo "# Commit SHA: $GITHUB_SHA"
+          echo "# Commit Message: $(git log -1 --pretty=format:'%s' $GITHUB_SHA 2>/dev/null || echo 'No commit message available')"
+        } >> .env
         
         # Install dependencies in target directory
         pip install -r requirements.txt

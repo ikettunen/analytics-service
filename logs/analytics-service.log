@@ -425,3 +425,67 @@
 2025-12-02T17:03:30:  * Running on http://192.168.1.102:5002
 2025-12-02T17:03:30: Press CTRL+C to quit
 2025-12-02T17:03:30:  * Restarting with stat
+2025-12-02T17:05:32:  * Serving Flask app 'app'
+2025-12-02T17:05:32:  * Debug mode: on
+2025-12-02T17:05:32: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+2025-12-02T17:05:32:  * Running on all addresses (0.0.0.0)
+2025-12-02T17:05:32:  * Running on http://127.0.0.1:5002
+2025-12-02T17:05:32:  * Running on http://192.168.1.102:5002
+2025-12-02T17:05:32: Press CTRL+C to quit
+2025-12-02T17:05:32:  * Restarting with stat
+2025-12-02T21:09:20:  * Serving Flask app 'app'
+2025-12-02T21:09:20:  * Debug mode: on
+2025-12-02T21:09:20: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+2025-12-02T21:09:20:  * Running on all addresses (0.0.0.0)
+2025-12-02T21:09:20:  * Running on http://127.0.0.1:5002
+2025-12-02T21:09:20:  * Running on http://192.168.1.102:5002
+2025-12-02T21:09:20: Press CTRL+C to quit
+2025-12-02T21:09:20:  * Restarting with stat
+2025-12-03T11:39:46:  * Serving Flask app 'app'
+2025-12-03T11:39:46:  * Debug mode: on
+2025-12-03T11:39:46: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+2025-12-03T11:39:46:  * Running on all addresses (0.0.0.0)
+2025-12-03T11:39:46:  * Running on http://127.0.0.1:5002
+2025-12-03T11:39:46:  * Running on http://192.168.1.102:5002
+2025-12-03T11:39:46: Press CTRL+C to quit
+2025-12-03T11:39:46:  * Restarting with stat
+2025-12-03T17:13:19:  * Serving Flask app 'app'
+2025-12-03T17:13:19:  * Debug mode: on
+2025-12-03T17:13:19: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+2025-12-03T17:13:19:  * Running on all addresses (0.0.0.0)
+2025-12-03T17:13:19:  * Running on http://127.0.0.1:5002
+2025-12-03T17:13:19:  * Running on http://192.168.1.102:5002
+2025-12-03T17:13:19: Press CTRL+C to quit
+2025-12-03T17:13:19:  * Restarting with stat
+2025-12-03T17:16:09:  * Serving Flask app 'app'
+2025-12-03T17:16:09:  * Debug mode: on
+2025-12-03T17:16:09: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+2025-12-03T17:16:09:  * Running on all addresses (0.0.0.0)
+2025-12-03T17:16:09:  * Running on http://127.0.0.1:5002
+2025-12-03T17:16:09:  * Running on http://192.168.1.102:5002
+2025-12-03T17:16:09: Press CTRL+C to quit
+2025-12-03T17:16:09:  * Restarting with stat
+2025-12-03T18:21:50:  * Serving Flask app 'app'
+2025-12-03T18:21:50:  * Debug mode: on
+2025-12-03T18:21:50: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+2025-12-03T18:21:50:  * Running on all addresses (0.0.0.0)
+2025-12-03T18:21:50:  * Running on http://127.0.0.1:5002
+2025-12-03T18:21:50:  * Running on http://192.168.1.102:5002
+2025-12-03T18:21:50: Press CTRL+C to quit
+2025-12-03T18:21:50:  * Restarting with stat
+2025-12-03T19:09:13:  * Serving Flask app 'app'
+2025-12-03T19:09:13:  * Debug mode: on
+2025-12-03T19:09:13: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+2025-12-03T19:09:13:  * Running on all addresses (0.0.0.0)
+2025-12-03T19:09:13:  * Running on http://127.0.0.1:5002
+2025-12-03T19:09:13:  * Running on http://192.168.1.102:5002
+2025-12-03T19:09:13: Press CTRL+C to quit
+2025-12-03T19:09:13:  * Restarting with stat
+2025-12-03T19:12:06:  * Serving Flask app 'app'
+2025-12-03T19:12:06:  * Debug mode: on
+2025-12-03T19:12:06: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+2025-12-03T19:12:06:  * Running on all addresses (0.0.0.0)
+2025-12-03T19:12:06:  * Running on http://127.0.0.1:5002
+2025-12-03T19:12:06:  * Running on http://192.168.1.102:5002
+2025-12-03T19:12:06: Press CTRL+C to quit
+2025-12-03T19:12:06:  * Restarting with stat
