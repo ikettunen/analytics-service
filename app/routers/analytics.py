@@ -102,3 +102,59 @@ async def dashboard_stats(db: Session = Depends(get_mysql_session)):
         
     except Exception as e:
         return {"error": str(e), "data": None}
+
+@router.get("/staff/{staff_id}/tasks/today")
+async def staff_tasks_today(staff_id: str, mongo_db = Depends(get_mongo_db)):
+    # Get staff tasks for today from MongoDB visit_data collection
+    try:
+        from datetime import datetime, timedelta
+        
+        # Get today's date range
+        today_start = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
+        today_end = today_start + timedelta(days=1)
+        
+        # Query MongoDB for visits assigned to this staff member today
+        visits_collection = mongo_db.visit_data
+        
+        # Find all visits for this staff member today
+        visits = list(visits_collection.find({
+            "assignedStaffId": staff_id,
+            "scheduledTime": {
+                "$gte": today_start,
+                "$lt": today_end
+            }
+        }))
+        
+        # Calculate task statistics
+        total_tasks = 0
+        completed_tasks = 0
+        pending_tasks = 0
+        high_priority_pending = 0
+        total_visits = len(visits)
+        
+        for visit in visits:
+            tasks = visit.get("tasks", [])
+            total_tasks += len(tasks)
+            
+            for task in tasks:
+                if task.get("status") == "completed":
+                    completed_tasks += 1
+                else:
+                    pending_tasks += 1
+                    if task.get("priority") == "high":
+                        high_priority_pending += 1
+        
+        # Calculate completion rate
+        completion_rate = (completed_tasks / total_tasks * 100) if total_tasks > 0 else 0
+        
+        return {"data": {
+            "totalTasks": total_tasks,
+            "completedTasks": completed_tasks,
+            "pendingTasks": pending_tasks,
+            "highPriorityPending": high_priority_pending,
+            "totalVisits": total_visits,
+            "completionRate": round(completion_rate, 1)
+        }}
+        
+    except Exception as e:
+        return {"error": str(e), "data": None}
